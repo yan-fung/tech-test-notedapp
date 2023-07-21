@@ -1,4 +1,5 @@
 import { useState } from "react";
+import NewsletterSignup from "./NewsletterSignup";
 import Reviews from "./Reviews";
 import "../styles/app.css";
 
@@ -8,6 +9,7 @@ const App = () => {
   return (
     <>
       <div className="App">
+        <NewsletterSignup />
         <Reviews
           reviews={reviews}
           setReviews={setReviews}
