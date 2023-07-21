@@ -2,9 +2,6 @@
 
 exports[`ReviewCards renders correctly 1`] = `
 <DocumentFragment>
-  <h1>
-    Reviews
-  </h1>
   <div>
     <div
       class="title"
@@ -14,9 +11,20 @@ exports[`ReviewCards renders correctly 1`] = `
     <div
       class="rating"
       data-testid="review_rating"
+    >
+      5
+    </div>
+    <div
+      class="date"
     />
-    5user1
-    <p>
+    <div
+      class="name"
+    >
+      user1
+    </div>
+    <p
+      class="body"
+    >
       Amazing app
     </p>
   </div>
