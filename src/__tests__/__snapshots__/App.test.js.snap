@@ -5,7 +5,14 @@ exports[`renders app 1`] = `
   <div
     class="App"
   >
-    Build your components here
+    <div
+      class="review-content"
+      data-testid="review__content"
+    >
+      <div>
+        Loading...
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;
