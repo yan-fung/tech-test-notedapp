@@ -11,17 +11,25 @@ exports[`renders app 1`] = `
       <div>
          Stay up-to-date with
       </div>
-      <h1>
-        News, updates, promos, and exclusives from NOTED.
-      </h1>
+      <p>
+        News, updates, promos, and exclusives from 
+        <span
+          class="noted"
+        >
+          Noted.
+        </span>
+      </p>
       <div
         class="subscription-form"
       >
         <form
           class="form"
         >
-          <label>
+          <label
+            class="label"
+          >
             <input
+              class="input"
               pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\\\.[A-Za-z]{2,}"
               placeholder="Enter your email"
               required=""
@@ -30,6 +38,7 @@ exports[`renders app 1`] = `
             />
           </label>
           <button
+            class="button"
             type="submit"
           >
             Subscribe

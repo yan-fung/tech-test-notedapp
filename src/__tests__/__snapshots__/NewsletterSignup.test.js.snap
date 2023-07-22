@@ -8,54 +8,25 @@ exports[`NewsletterSignup component renders correctly 1`] = `
     <div>
        Stay up-to-date with
     </div>
-    <h1>
-      News, updates, promos, and exclusives from NOTED.
-    </h1>
+    <p>
+      News, updates, promos, and exclusives from 
+      <span
+        class="noted"
+      >
+        Noted.
+      </span>
+    </p>
     <div
       class="subscription-form"
     >
       <form
         class="form"
       >
-        <label>
-          <input
-            pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\\\.[A-Za-z]{2,}"
-            placeholder="Enter your email"
-            required=""
-            type="email"
-            value=""
-          />
-        </label>
-        <button
-          type="submit"
+        <label
+          class="label"
         >
-          Subscribe
-        </button>
-      </form>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`NewsletterSignup component rendersco rrectly 1`] = `
-<DocumentFragment>
-  <div
-    class="subscription-container"
-  >
-    <div>
-       Stay up-to-date with
-    </div>
-    <h1>
-      News, updates, promos, and exclusives from NOTED.
-    </h1>
-    <div
-      class="subscription-form"
-    >
-      <form
-        class="form"
-      >
-        <label>
           <input
+            class="input"
             pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\\\.[A-Za-z]{2,}"
             placeholder="Enter your email"
             required=""
@@ -64,6 +35,7 @@ exports[`NewsletterSignup component rendersco rrectly 1`] = `
           />
         </label>
         <button
+          class="button"
           type="submit"
         >
           Subscribe

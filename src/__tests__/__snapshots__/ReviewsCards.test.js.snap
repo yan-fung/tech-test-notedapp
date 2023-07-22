@@ -2,25 +2,35 @@
 
 exports[`ReviewCards renders correctly 1`] = `
 <DocumentFragment>
-  <div>
+  <div
+    class="review-cards-container"
+  >
     <div
-      class="title"
+      class="title-date-container"
     >
-      Excellent
+      <div
+        class="title"
+      >
+        Excellent
+      </div>
+      <div
+        class="date"
+      />
     </div>
     <div
-      class="rating"
-      data-testid="review_rating"
+      class="rating-name-container"
     >
-      5
-    </div>
-    <div
-      class="date"
-    />
-    <div
-      class="name"
-    >
-      user1
+      <div
+        class="rating"
+        data-testid="review_rating"
+      >
+        ★★★★★
+      </div>
+      <div
+        class="name"
+      >
+        user1
+      </div>
     </div>
     <p
       class="body"
