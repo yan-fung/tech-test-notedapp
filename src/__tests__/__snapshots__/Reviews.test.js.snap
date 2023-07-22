@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Reviews component render correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="review-content"
+    data-testid="review__content"
+  >
+    <div
+      class="item"
+    >
+      <div>
+        <div
+          class="title"
+        />
+        <div
+          class="rating"
+          data-testid="review_rating"
+        />
+        <div
+          class="date"
+        />
+        <div
+          class="name"
+        />
+        <p
+          class="body"
+        />
+      </div>
+    </div>
+    <div
+      class="item"
+    >
+      <div>
+        <div
+          class="title"
+        />
+        <div
+          class="rating"
+          data-testid="review_rating"
+        />
+        <div
+          class="date"
+        />
+        <div
+          class="name"
+        />
+        <p
+          class="body"
+        />
+      </div>
+    </div>
+    <div
+      class="item"
+    >
+      <div>
+        <div
+          class="title"
+        />
+        <div
+          class="rating"
+          data-testid="review_rating"
+        />
+        <div
+          class="date"
+        />
+        <div
+          class="name"
+        />
+        <p
+          class="body"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

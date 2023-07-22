@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alert component displays a success message 1`] = `
+<DocumentFragment>
+  <div
+    class="alert-error"
+  >
+    <svg
+      aria-hidden="true"
+      class="svg-inline--fa fa-circle-exclamation error"
+      data-icon="circle-exclamation"
+      data-prefix="fas"
+      focusable="false"
+      role="img"
+      viewBox="0 0 512 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24V264c0 13.3-10.7 24-24 24s-24-10.7-24-24V152c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"
+        fill="currentColor"
+      />
+    </svg>
+    Success!
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Alert component displays an error message 1`] = `
+<DocumentFragment>
+  <div
+    class="alert-error"
+  >
+    <svg
+      aria-hidden="true"
+      class="svg-inline--fa fa-circle-exclamation error"
+      data-icon="circle-exclamation"
+      data-prefix="fas"
+      focusable="false"
+      role="img"
+      viewBox="0 0 512 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24V264c0 13.3-10.7 24-24 24s-24-10.7-24-24V152c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"
+        fill="currentColor"
+      />
+    </svg>
+    Error!
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Alert component does not render an error or a success message if message props is empty 1`] = `<DocumentFragment />`;
