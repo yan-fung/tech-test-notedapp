@@ -12,5 +12,6 @@
 
   &:hover {
     background: lighten($backgroundColor, 20%);
+    color: $second-color;
   }
 }
