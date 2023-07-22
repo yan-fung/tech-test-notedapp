@@ -1,0 +1,46 @@
+@import "./_main";
+@import "./mixins";
+
+.subscription-container {
+  background-color: $dark-blue-color;
+  color: $primary-color;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    font-size: 27px;
+  }
+
+  span {
+    font-weight: bold;
+    color: $second-color;
+  }
+  
+  .subscription-form {
+    display: flex; 
+    padding-top: 20px;
+    padding-bottom: 10px;
+    
+    .label {
+      padding-right: 10px;
+    }
+  }
+  
+  input {
+    background:#222338;
+    color: $second-color;
+    border-radius: 5px;
+    padding-left: 10px;
+    height: 35px;
+    width: 400px;
+    font-size: 20px;
+  }
+
+  button {
+    @include button();
+  }
+}
+
