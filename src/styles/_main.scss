@@ -1,3 +1,12 @@
-body {
-  padding: 10px;
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;&display=swap');
+
+* {
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
 }
+
+$primary-color: #a1a1aa;
+$second-color: #f8f8f5;
+$dark-blue-color:#090922;
+$navy-color:#1e2451;
+$grey-color:#2e3042;
