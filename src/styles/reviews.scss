@@ -1,0 +1,21 @@
+@import "./_main";
+
+.review-content {
+  background-color: $navy-color;
+  color: $primary-color;
+  height: 50vh;
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
+
+  .item {
+    background-color:rgba(153, 153, 169, 0.177);
+    width: 300px;
+    height: 200px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    margin: 10px;
+    font-family: 'Rubik', sans-serif;
+  }
+}
