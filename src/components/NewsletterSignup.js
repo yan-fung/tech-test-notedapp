@@ -7,6 +7,7 @@ import {
   serverTimestamp,
 } from "firebase/firestore";
 import { db } from "../firebase";
+import Alert from "./Alert";
 import { useState } from "react";
 
 const NewsletterSignup = () => {
@@ -30,14 +31,16 @@ const NewsletterSignup = () => {
           message: "Invalid email, please enter again.",
           isSuccess: false,
         });
+        setEmail("");
         console.log(alert);
         return;
       }
-      if (email.match(/\.com\.com|\.net\.net|\.org\.org$/i)) {
+      if (email.match(/(\.(com|net|org)){2,}$/i)) {
         setAlert({
           message: "Invalid email, please enter again.",
           isSuccess: false,
         });
+        setEmail("");
         console.log(alert);
         return;
       }
@@ -46,6 +49,7 @@ const NewsletterSignup = () => {
           message: "Invalid email, please enter again.",
           isSuccess: false,
         });
+        setEmail("");
         console.log(alert);
         return;
       }
@@ -55,6 +59,7 @@ const NewsletterSignup = () => {
           message: "Invalid email, please enter again.",
           isSuccess: false,
         });
+        setEmail("");
         console.log(alert);
         return;
       } else {
@@ -70,6 +75,7 @@ const NewsletterSignup = () => {
             message: "Email already exists.",
             isSuccess: false,
           });
+          setEmail("");
           console.log(alert);
           return;
         }
@@ -79,7 +85,7 @@ const NewsletterSignup = () => {
           date: serverTimestamp(),
         });
         setAlert({
-          message: "Email added successfully.",
+          message: "Thanks for subscribing to our newsletter.",
           isSuccess: true,
         });
         console.log("Document written with ID: ", docRef.id);
@@ -100,19 +106,22 @@ const NewsletterSignup = () => {
       <h1>News, updates, promos, and exclusives from NOTED.</h1>
 
       <div className="subscription-form">
-        <form onSubmit={handleSubmit} className="form">
-          <label>
-            <input
-              type="email"
-              value={email}
-              placeholder="Enter your email"
-              onChange={handleInputChange}
-              required
-              pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}"
-            />
-          </label>
-          <button type="submit">Subscribe</button>
-        </form>
+        <Alert message={alert.message} success={alert.isSuccess} />
+        {!alert.isSuccess && (
+          <form onSubmit={handleSubmit} className="form">
+            <label>
+              <input
+                type="email"
+                value={email}
+                placeholder="Enter your email"
+                onChange={handleInputChange}
+                required
+                pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}"
+              />
+            </label>
+            <button type="submit">Subscribe</button>
+          </form>
+        )}
       </div>
     </div>
   );
