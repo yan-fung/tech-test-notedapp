@@ -2,6 +2,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
 import { useEffect } from "react";
 import ReviewsCards from "./ReviewsCards";
+import "../styles/reviews.scss";
 
 const Reviews = ({ reviews, setReviews, isLoading, setIsLoading }) => {
   const fetchReview = async () => {

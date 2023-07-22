@@ -9,6 +9,7 @@ import {
 import { db } from "../firebase";
 import Alert from "./Alert";
 import { useState } from "react";
+import "../styles/newsletterSignup.scss";
 
 const NewsletterSignup = () => {
   const [email, setEmail] = useState("");
@@ -103,14 +104,17 @@ const NewsletterSignup = () => {
   return (
     <div className="subscription-container">
       <div> Stay up-to-date with</div>
-      <h1>News, updates, promos, and exclusives from NOTED.</h1>
+      <p>
+        News, updates, promos, and exclusives from{" "}
+        <span className="noted">Noted.</span>
+      </p>
 
       <div className="subscription-form">
-        <Alert message={alert.message} success={alert.isSuccess} />
         {!alert.isSuccess && (
           <form onSubmit={handleSubmit} className="form">
-            <label>
+            <label className="label">
               <input
+                className="input"
                 type="email"
                 value={email}
                 placeholder="Enter your email"
@@ -119,10 +123,13 @@ const NewsletterSignup = () => {
                 pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}"
               />
             </label>
-            <button type="submit">Subscribe</button>
+            <button className="button" type="submit">
+              Subscribe
+            </button>
           </form>
         )}
       </div>
+      <Alert message={alert.message} success={alert.isSuccess} />
     </div>
   );
 };
