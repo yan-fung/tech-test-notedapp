@@ -9,6 +9,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 
   p {
     font-size: 27px;
@@ -44,3 +45,16 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .subscription-container {
+    height: 40vh;
+    p {
+      font-size: 20px;
+    }
+
+    input {
+      width: 300px;
+      margin-bottom: 20px;
+    }
+  }
+}
