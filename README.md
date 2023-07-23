@@ -23,13 +23,24 @@ gh repo clone yan-fung/tech-test-notedapp
 npm install
 ```
 
-3. Run the development server for the app.
+3. Create an .env file in the root directory of the project. Store the Firebase API key, auth domain, project ID, storage bucket, messaging sender ID, and app ID as environment variables. See the example below:
+
+```bash
+REACT_APP_API_KEY=XXXXXXXXXXXXX
+REACT_APP_AUTH_DOMAIN=XXXXXXXXXXXXX
+REACT_APP_PROJECT_ID=XXXXXXXXXXXXX
+REACT_APP_STORAGE_BUCKET=XXXXXXXXXXXXX
+REACT_APP_MESSAGING-SENDER_ID=XXXXXXXXXXXXX
+REACT_APP_APP_ID=XXXXXXXXXXXXX
+```
+
+4. Run the development server for the app.
 
 ```bash
 npm start
 ```
 
-4. Test the code in tests folder. 
+5. Test the code in tests folder. 
 
 ```bash
 npm test
