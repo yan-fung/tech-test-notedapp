@@ -11,8 +11,8 @@ const Alert = ({ message, success }) => {
 
   return (
     <div className={`alert-${success ? "success" : "error"}`}>
-      {message === "Thanks for subscribing to our newsletter." ? (
-        <FontAwesomeIcon icon={faCheck} className="check" />
+      {message === "Thanks for subscribing to our newsletter!" ? (
+        ""
       ) : (
         <FontAwesomeIcon icon={faCircleExclamation} className="error" />
       )}
