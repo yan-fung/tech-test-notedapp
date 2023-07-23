@@ -10,6 +10,7 @@ import { db } from "../firebase";
 import Alert from "./Alert";
 import { useState } from "react";
 import "../styles/newsletterSignup.scss";
+import isValidEmail from "../utils/emailValidator";
 
 const NewsletterSignup = () => {
   const [email, setEmail] = useState("");
@@ -23,39 +24,7 @@ const NewsletterSignup = () => {
     e.preventDefault();
     setAlert({ message: "", isSuccess: false });
     try {
-      const emailPattern =
-        /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-      const [, tld] = email.split(".").slice(-2);
-      const validTlds = ["com", "org", "net"];
-      if (!emailPattern.test(email)) {
-        setAlert({
-          message: "Invalid email, please enter again.",
-          isSuccess: false,
-        });
-        setEmail("");
-        console.log(alert);
-        return;
-      }
-      if (email.match(/(\.(com|net|org)){2,}$/i)) {
-        setAlert({
-          message: "Invalid email, please enter again.",
-          isSuccess: false,
-        });
-        setEmail("");
-        console.log(alert);
-        return;
-      }
-      if (email.match(/\.\./) || email.split("@")[0].match(/\.{2,}/)) {
-        setAlert({
-          message: "Invalid email, please enter again.",
-          isSuccess: false,
-        });
-        setEmail("");
-        console.log(alert);
-        return;
-      }
-
-      if (!validTlds.includes(tld.toLowerCase())) {
+      if (!isValidEmail(email)) {
         setAlert({
           message: "Invalid email, please enter again.",
           isSuccess: false,
@@ -86,7 +55,7 @@ const NewsletterSignup = () => {
           date: serverTimestamp(),
         });
         setAlert({
-          message: "Thanks for subscribing to our newsletter.",
+          message: "Thanks for subscribing to our newsletter!",
           isSuccess: true,
         });
         console.log("Document written with ID: ", docRef.id);
@@ -119,8 +88,6 @@ const NewsletterSignup = () => {
                 value={email}
                 placeholder="Enter your email"
                 onChange={handleInputChange}
-                required
-                pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}"
               />
             </label>
             <button className="button" type="submit">
