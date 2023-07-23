@@ -12,7 +12,7 @@
   text-align: center;
 
   p {
-    font-size: 27px;
+    font-size: 26px;
   }
 
   span {
@@ -49,12 +49,14 @@
   .subscription-container {
     height: 40vh;
     p {
-      font-size: 20px;
+      font-size: 24px;
     }
-
     input {
-      width: 300px;
+      width: 305px;
       margin-bottom: 20px;
+    }
+    button {
+      width: 320px;
     }
   }
 }
