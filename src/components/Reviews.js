@@ -9,14 +9,13 @@ const Reviews = ({ reviews, setReviews, isLoading, setIsLoading }) => {
     setIsLoading(true);
 
     try {
-      await getDocs(collection(db, "reviews")).then((querySnapshot) => {
-        const newData = querySnapshot.docs.map((doc) => ({
-          ...doc.data(),
-          id: doc.id,
-        }));
-        setReviews(newData);
-        console.log(reviews, newData);
-      });
+      const querySnapshot = await getDocs(collection(db, "reviews"));
+      const newData = querySnapshot.docs.map((doc) => ({
+        ...doc.data(),
+        id: doc.id,
+      }));
+      setReviews(newData);
+      console.log(reviews, newData);
     } catch (error) {
       console.log("Error fetching data:", error);
     } finally {
