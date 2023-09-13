@@ -7,7 +7,7 @@ A technical test as part of an interview for Digital Workroom.
 
 My task involved building a React web application that allows users to subscribe to the newsletter by simply entering their email addresses. Valid email addresses will be securely stored in the Firestore database. The application was built with React and JSX alongside Jest and React Testing library for testing purposes. Sass is employed to style the entire application, ensuring a visually appealing presentation across all devices.
 
-<img width="220" height="425" alt="Screenshot" src="https://github.com/yan-fung/tech-test-notedapp/assets/106375522/f8875d7b-6380-4616-880f-1330b181f100"> ![ezgif com-video-to-gif](https://github.com/yan-fung/tech-test-notedapp/assets/106375522/1c5ea988-c6ee-421e-b3ce-7151039a0328)
+ ![ezgif com-video-to-gif](https://github.com/yan-fung/tech-test-notedapp/assets/106375522/1c5ea988-c6ee-421e-b3ce-7151039a0328) <img width="220" height="425" alt="Screenshot" src="https://github.com/yan-fung/tech-test-notedapp/assets/106375522/f8875d7b-6380-4616-880f-1330b181f100">
 
 
 ## Quick Start and Commands
